@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Secret Role Game</title>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0f172a;
+      --primary: #3b82f6;
+      --accent: #38bdf8;
+      --danger: #ef4444;
+      --text: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, #020617, #020617);
+      color: var(--text);
+      min-height: 100vh;
+      padding:
+        env(safe-area-inset-top)
+        env(safe-area-inset-right)
+        env(safe-area-inset-bottom)
+        env(safe-area-inset-left);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 420px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      text-align: center;
+      animation: fadeIn 0.25s ease;
+    }
+
+    h1, h2 {
+      margin: 0 0 16px;
+      font-weight: 700;
+    }
+
+    p {
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 14px;
+      font-size: 18px;
+      border-radius: 14px;
+      border: none;
+      background: #020617;
+      color: white;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 18px;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: white;
+      transition: transform 0.08s ease, opacity 0.08s ease;
+    }
+
+    button:active {
+      transform: scale(0.97);
+      opacity: 0.85;
+    }
+
+    .secondary {
+      background: #020617;
+      border: 2px solid var(--primary);
+      margin-top: 12px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .role {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .imposter {
+      color: var(--danger);
+    }
+
+    .word {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .player-num {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- SETUP -->
+    <div id="setup" class="card">
+      <h1>Secret Role Game</h1>
+      <input type="number" id="players" placeholder="Number of players" min="3">
+      <input type="number" id="imposters" placeholder="Number of imposters" min="1">
+      <select id="category"></select>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- PASS -->
+    <div id="pass" class="card hidden">
+      <div class="player-num">Player <span id="playerNum"></span></div>
+      <p>Tap when you're ready to see your role</p>
+      <button onclick="showRole()">Reveal Role</button>
+    </div>
+
+    <!-- REVEAL -->
+    <div id="reveal" class="card hidden">
+      <div id="roleText" class="role"></div>
+      <div id="wordText" class="word"></div>
+      <button class="secondary" onclick="nextPlayer()">Hide & Pass</button>
+    </div>
+
+    <!-- END -->
+    <div id="end" class="card hidden">
+      <h2>All roles assigned</h2>
+      <p>Hand the phone back and start playing 👀</p>
+    </div>
+
+  </div>
+
+  <script>
+    let data;
+    let roles = [];
+    let currentPlayer = 0;
+
+    fetch("data.json")
+      .then(res => res.json())
+      .then(json => {
+        data = json;
+        const select = document.getElementById("category");
+        Object.keys(data).forEach(cat => {
+          const option = document.createElement("option");
+          option.value = cat;
+          option.textContent = cat;
+          select.appendChild(option);
+        });
+      });
+
+    function startGame() {
+      const players = +playersInput.value;
+      const imposters = +impostersInput.value;
+      const category = categorySelect.value;
+
+      if (players < 3 || imposters < 1 || imposters >= players) {
+        alert("Check your numbers!");
+        return;
+      }
+
+      const words = data[category];
+      const chosenWord = words[Math.floor(Math.random() * words.length)];
+
+      roles = [];
+
+      for (let i = 0; i < imposters; i++) {
+        roles.push({ role: "Imposter" });
+      }
+
+      for (let i = 0; i < players - imposters; i++) {
+        roles.push({ role: "Crewmate", word: chosenWord });
+      }
+
+      roles.sort(() => Math.random() - 0.5);
+      currentPlayer = 0;
+      showPass();
+    }
+
+    const playersInput = document.getElementById("players");
+    const impostersInput = document.getElementById("imposters");
+    const categorySelect = document.getElementById("category");
+
+    function showPass() {
+      hideAll();
+      document.getElementById("pass").classList.remove("hidden");
+      document.getElementById("playerNum").textContent = currentPlayer + 1;
+    }
+
+    function showRole() {
+      hideAll();
+      const role = roles[currentPlayer];
+      const roleText = document.getElementById("roleText");
+      const wordText = document.getElementById("wordText");
+
+      roleText.textContent = role.role;
+      roleText.className = role.role === "Imposter" ? "role imposter" : "role";
+
+      wordText.textContent =
+        role.role === "Crewmate" ? role.word : "No word for you 😈";
+
+      document.getElementById("reveal").classList.remove("hidden");
+    }
+
+    function nextPlayer() {
+      currentPlayer++;
+      if (currentPlayer >= roles.length) {
+        hideAll();
+        document.getElementById("end").classList.remove("hidden");
+      } else {
+        showPass();
+      }
+    }
+
+    function hideAll() {
+      document.querySelectorAll(".card").forEach(c => c.classList.add("hidden"));
+    }
+  </script>
+</body>
+</html>
