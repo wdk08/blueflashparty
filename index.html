@@ -161,10 +161,13 @@
     </div>
 
     <!-- END -->
-    <div id="end" class="card hidden">
-      <h2>All roles assigned</h2>
-      <p>Hand the phone back and start playing 👀</p>
-    </div>
+   <!-- END -->
+<div id="end" class="card hidden">
+  <h2>All roles assigned</h2>
+  <p>Hand the phone back and start playing 👀</p>
+  <button onclick="resetGame()">Play Again</button>
+</div>
+
 
   </div>
 
@@ -185,6 +188,19 @@
           select.appendChild(option);
         });
       });
+
+function resetGame() {
+  roles = [];
+  currentPlayer = 0;
+
+  hideAll();
+  document.getElementById("setup").classList.remove("hidden");
+
+  // Optional: clear inputs
+  playersInput.value = "";
+  impostersInput.value = "";
+}
+
 
     function startGame() {
       const players = +playersInput.value;
