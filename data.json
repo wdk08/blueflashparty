@@ -20,7 +20,17 @@
     "Nightwing",
     "Daredevil",
     "Punisher",
-    "Green Arrow"
+    "Green Arrow",
+    "Moon Knight",
+    "Shazam",
+    "Supergirl",
+    "Blade",
+    "Vision",
+    "Hawkeye",
+    "Joker",
+    "Thanos",
+    "Magneto",
+    "Lex Luthor"
   ],
 
   "Movies": [
@@ -42,7 +52,15 @@
     "Top Gun",
     "Oppenheimer",
     "Jaws",
-    "Rocky"
+    "Rocky",
+    "Shrek",
+    "Toy Story",
+    "The Lion King",
+    "Frozen",
+    "Pirates of the Caribbean",
+    "John Wick",
+    "Jurassic World",
+    "Indiana Jones"
   ],
 
   "Games": [
@@ -64,7 +82,13 @@
     "FIFA",
     "NBA 2K",
     "Rocket League",
-    "God of War"
+    "God of War",
+    "Assassin's Creed",
+    "Fall Guys",
+    "Clash Royale",
+    "Brawl Stars",
+    "Pokémon",
+    "Mario Kart"
   ],
 
   "Star Wars": [
@@ -78,16 +102,18 @@
     "Anakin Skywalker",
     "Palpatine",
     "Boba Fett",
-    "Mandalorian",
+    "The Mandalorian",
     "Grogu",
     "Rey",
     "Kylo Ren",
     "Ahsoka Tano",
     "Stormtrooper",
+    "Clone Trooper",
     "Death Star",
     "Millennium Falcon",
     "Tatooine",
     "Hoth",
+    "Coruscant",
     "Lightsaber",
     "Jedi",
     "Sith"
@@ -112,7 +138,9 @@
     "Hawkins Lab",
     "Upside Down",
     "Hellfire Club",
-    "Starcourt Mall"
+    "Starcourt Mall",
+    "Season 4",
+    "Running Up That Hill"
   ],
 
   "Lord of the Rings": [
@@ -135,7 +163,9 @@
     "The Shire",
     "Mordor",
     "Nazgûl",
-    "Orcs"
+    "Orcs",
+    "Balrog",
+    "Minas Tirith"
   ],
 
   "Marvel": [
@@ -160,7 +190,9 @@
     "Thanos",
     "Infinity Stones",
     "Wakanda",
-    "Avengers Tower"
+    "Avengers Tower",
+    "Multiverse",
+    "Kang"
   ],
 
   "NFL": [
@@ -181,11 +213,14 @@
     "Buffalo Bills",
     "Miami Dolphins",
     "New England Patriots",
+    "Green Bay Packers",
     "Super Bowl",
     "Touchdown",
     "Quarterback",
     "Wide Receiver",
-    "End Zone"
+    "End Zone",
+    "Field Goal",
+    "Draft Day"
   ],
 
   "Brands": [
@@ -211,7 +246,12 @@
     "Xbox",
     "Amazon",
     "Target",
-    "Walmart"
+    "Walmart",
+    "Costco",
+    "Red Bull",
+    "Monster Energy",
+    "Netflix",
+    "Spotify"
   ],
 
   "Animals": [
@@ -236,7 +276,11 @@
     "Alligator",
     "Crocodile",
     "Kangaroo",
-    "Penguin"
+    "Penguin",
+    "Panda",
+    "Koala",
+    "Octopus",
+    "Gorilla"
   ],
 
   "Celebrities": [
@@ -251,7 +295,6 @@
     "Angelina Jolie",
     "Johnny Depp",
     "Jennifer Lawrence",
-    "Kylie Jenner",
     "Shawn Mendes",
     "Selena Gomez",
     "Will Smith",
@@ -261,31 +304,59 @@
     "Justin Bieber",
     "Nicki Minaj",
     "Sadie Sink",
-    "Noah Schnapp",
     "Millie Bobby Brown",
     "Finn Wolfhard",
-    "Gaten Matarazzo",
-    "Caleb McLaughlin",
     "Joe Keery",
     "Maya Hawke",
-    "Robert Downey Jr.",
     "Chris Evans",
-    "Mark Ruffalo",
     "Chris Hemsworth",
-    "Livvy Dunne",
-    "Ozzy Osbourne",
+    "Mark Ruffalo",
     "Billie Eilish",
     "Dua Lipa",
     "Olivia Rodrigo",
     "Harry Styles",
-    "Shakira",
     "Bad Bunny",
-    "Donald Trump",
     "Elon Musk",
-    "Jeff Bezos",
-    "Joe Biden",
-    "Kamala Harris",
-    "Charlie Kirk",
-    "Ben Shapiro"
+    "Jeff Bezos"
+  ],
+
+  "Celebs":[
+    "Sadie Sink"
+  ],
+
+  "Music": [
+    "Drake",
+    "Kanye West",
+    "Juice WRLD",
+    "Travis Scott",
+    "Playboi Carti",
+    "Lil Uzi Vert",
+    "Post Malone",
+    "The Weeknd",
+    "Eminem",
+    "Kendrick Lamar",
+    "J. Cole",
+    "Future",
+    "Metro Boomin",
+    "21 Savage",
+    "Lil Baby",
+    "Gunna",
+    "Taylor Swift",
+    "Ariana Grande",
+    "Billie Eilish",
+    "Olivia Rodrigo",
+    "Harry Styles",
+    "Rock",
+    "Hip Hop",
+    "Pop",
+    "Rap",
+    "Album",
+    "Concert"
+  ],
+
+  "Memes": [
+    "6 7",
+    "Distracted Boyfriend",
+    "Skibidi Toilet"
   ]
 }
