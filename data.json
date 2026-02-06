@@ -116,7 +116,9 @@
     "Coruscant",
     "Lightsaber",
     "Jedi",
-    "Sith"
+    "Sith",
+    "X-Wing",
+    "TIE Fighter"
   ],
 
   "Stranger Things": [
@@ -140,7 +142,21 @@
     "Hellfire Club",
     "Starcourt Mall",
     "Season 4",
-    "Running Up That Hill"
+    "Argyle",
+    "Billy Hargrove",
+    "Dr. Brenner",
+    "Dart (Demodog)",
+    "Scoops Ahoy",
+    "Enzo",
+    "The SQUAWK",
+    "Delightful Derek",
+    "Jonathon Byers",
+    "Murray Bauman",
+    "Alexei",
+    "Holly Wheeler"
+
+
+
   ],
 
   "Lord of the Rings": [
@@ -220,7 +236,8 @@
     "Wide Receiver",
     "End Zone",
     "Field Goal",
-    "Draft Day"
+    "Linebacker",
+    "Defensive End"
   ],
 
   "Brands": [
@@ -317,11 +334,38 @@
     "Harry Styles",
     "Bad Bunny",
     "Elon Musk",
-    "Jeff Bezos"
+    "Jeff Bezos",
+    "Adolf Hitler"
   ],
 
-  "Celebs":[
-    "Sadie Sink"
+  "Objects":[
+    "Stapler",
+    "Paperclip",
+    "Notebook",
+    "Backpack",
+    "Smartphone",
+    "Laptop",
+    "Headphones",
+    "Watch",
+    "Sunglasses",
+    "Wallet",
+    "Keys",
+    "Pen",
+    "Pencil",
+    "Charger",
+    "Mouse",
+    "Keyboard",
+    "Monitor",
+    "Desk",
+    "Chair",
+    "Lamp",
+    "Bottle",
+    "Mug",
+    "Glasses",
+    "Camera",
+    "Microphone",
+    "Speaker",
+    "Printer"
   ],
 
   "Music": [
@@ -358,5 +402,22 @@
     "6 7",
     "Distracted Boyfriend",
     "Skibidi Toilet"
+  ],
+
+  "Holidays": [
+    "9/11",
+    "Christmas",
+    "Halloween",
+    "Thanksgiving",
+    "Easter",
+    "New Year's Day",
+    "Independence Day",
+    "Valentine's Day",
+    "St. Patrick's Day",
+    "Memorial Day",
+    "Labor Day",
+    "Veterans Day",
+    "Mother's Day",
+    "Father's Day"
   ]
 }
