@@ -60,7 +60,14 @@
     "Pirates of the Caribbean",
     "John Wick",
     "Jurassic World",
-    "Indiana Jones"
+    "Indiana Jones",
+    "Red Notice",
+    "Moana",
+    "Honey I Shrunk the Kids",
+    "The Incredibles",
+    "Finding Nemo",
+    "The Avengers: Endgame"
+
   ],
 
   "Games": [
@@ -118,7 +125,8 @@
     "Jedi",
     "Sith",
     "X-Wing",
-    "TIE Fighter"
+    "TIE Fighter",
+    "Jango Fett"
   ],
 
   "Stranger Things": [
@@ -153,9 +161,14 @@
     "Jonathon Byers",
     "Murray Bauman",
     "Alexei",
-    "Holly Wheeler"
-
-
+    "Holly Wheeler",
+    "Season 1",
+    "Season 3",
+    "Season 2",
+    "Season 5",
+    "Dr. Owens",
+    "Dimension X",
+    "Chrissy Cunningham"
 
   ],
 
@@ -211,33 +224,38 @@
     "Kang"
   ],
 
-  "NFL": [
-    "Patrick Mahomes",
-    "Tom Brady",
-    "Josh Allen",
-    "Joe Burrow",
-    "Lamar Jackson",
-    "Christian McCaffrey",
-    "Justin Jefferson",
-    "Travis Kelce",
-    "Aaron Rodgers",
-    "Jalen Hurts",
-    "Kansas City Chiefs",
-    "San Francisco 49ers",
-    "Dallas Cowboys",
-    "Philadelphia Eagles",
-    "Buffalo Bills",
-    "Miami Dolphins",
-    "New England Patriots",
-    "Green Bay Packers",
+  "Sports": [
+    "Football",
+    "Basketball",
+    "Baseball",
+    "Soccer",
+    "Tennis",
+    "Golf",
+    "Hockey",
+    "Boxing",
+    "MMA",
+    "Formula 1",
+    "NASCAR",
+    "Olympics",
     "Super Bowl",
-    "Touchdown",
+    "World Cup",
+    "Point Guard",
     "Quarterback",
+    "Striker",
+    "Goalkeeper",
+    "Pitcher",
+    "Running Back",
     "Wide Receiver",
-    "End Zone",
-    "Field Goal",
+    "Center",
+    "Quarterback",
+    "Tight End",
+    "Guard",
+    "O-Tackle",
+    "D-Tackle",
+    "D-End",
     "Linebacker",
-    "Defensive End"
+    "Cornerback",
+    "Safety"
   ],
 
   "Brands": [
@@ -395,15 +413,10 @@
     "Pop",
     "Rap",
     "Album",
-    "Concert"
+    "Concert",
+    "Joe keery",
+    "End Of Benginning"
   ],
-
-  "Memes": [
-    "6 7",
-    "Distracted Boyfriend",
-    "Skibidi Toilet"
-  ],
-
   "Holidays": [
     "9/11",
     "Christmas",
